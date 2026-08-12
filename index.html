@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wasswa Paul Kimbugwe | Senior Accountant</title>
+  <meta name="description" content="Professional accounting and financial services by Wasswa Paul Kimbugwe in Nyendo, Masaka, Uganda.">
+  <style>
+    :root {
+      --navy:#101827;
+      --navy2:#172238;
+      --maroon:#7d1630;
+      --gold:#d8ae5b;
+      --cream:#f7f3ed;
+      --white:#ffffff;
+      --text:#26303d;
+      --muted:#687384;
+      --line:#e7e0d7;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:Inter,Arial,sans-serif; color:var(--text); background:#fff; line-height:1.65; }
+    a { color:inherit; text-decoration:none; }
+    .container { width:min(1120px,92%); margin:auto; }
+    header {
+      position:sticky; top:0; z-index:20; background:rgba(16,24,39,.96);
+      border-bottom:1px solid rgba(216,174,91,.25); backdrop-filter:blur(8px);
+    }
+    .nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { color:#fff; font-weight:800; letter-spacing:.3px; font-size:1.05rem; }
+    .brand span { color:var(--gold); }
+    nav { display:flex; gap:22px; align-items:center; }
+    nav a { color:#e9edf4; font-size:.92rem; }
+    nav a:hover { color:var(--gold); }
+    .menu { display:none; background:none; border:0; color:white; font-size:1.6rem; }
+    .hero {
+      min-height:650px; display:grid; place-items:center; color:#fff;
+      background:
+        linear-gradient(90deg,rgba(16,24,39,.97) 0%,rgba(16,24,39,.82) 48%,rgba(16,24,39,.42) 100%),
+        url('paul.jpg') center 28%/cover no-repeat;
+    }
+    .hero-inner { padding:90px 0; max-width:720px; margin-right:auto; }
+    .eyebrow { color:var(--gold); text-transform:uppercase; letter-spacing:2px; font-weight:800; font-size:.78rem; }
+    h1 { font-size:clamp(2.5rem,6vw,5rem); line-height:1.05; margin:16px 0 22px; }
+    .hero p { color:#e4e9f0; max-width:640px; font-size:1.08rem; }
+    .buttons { display:flex; gap:13px; flex-wrap:wrap; margin-top:30px; }
+    .btn { display:inline-block; padding:12px 19px; border-radius:7px; font-weight:800; }
+    .primary { background:var(--maroon); color:#fff; }
+    .primary:hover { background:#9b1d3d; }
+    .outline { border:1px solid rgba(255,255,255,.45); color:#fff; }
+    .outline:hover { border-color:var(--gold); color:var(--gold); }
+    section { padding:80px 0; }
+    .soft { background:var(--cream); }
+    .section-title { max-width:680px; margin-bottom:38px; }
+    .section-title .eyebrow { color:var(--maroon); }
+    h2 { color:var(--navy); font-size:clamp(1.9rem,4vw,2.8rem); line-height:1.15; margin:8px 0 12px; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .card {
+      background:#fff; border:1px solid var(--line); border-radius:14px; padding:27px;
+      box-shadow:0 10px 30px rgba(16,24,39,.06);
+    }
+    .card h3 { color:var(--navy); margin:10px 0 8px; }
+    .icon { width:46px; height:46px; border-radius:10px; display:grid; place-items:center; background:#f4e4e8; color:var(--maroon); font-weight:900; }
+    .about { display:grid; grid-template-columns:.85fr 1.15fr; gap:55px; align-items:center; }
+    .about-photo { width:100%; max-height:560px; object-fit:cover; object-position:center; border-radius:18px; box-shadow:0 18px 45px rgba(16,24,39,.18); }
+    .facts { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:25px; }
+    .fact { padding:17px; border-left:3px solid var(--gold); background:#fff; }
+    .fact strong { display:block; color:var(--navy); }
+    .numbers { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:30px; }
+    .number { background:var(--navy); color:#fff; padding:25px; border-radius:12px; }
+    .number b { display:block; color:var(--gold); font-size:1.55rem; margin-bottom:3px; }
+    .contact-wrap { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+    .contact-card { background:var(--navy); color:#fff; border-radius:16px; padding:35px; }
+    .contact-card h2 { color:#fff; }
+    .contact-item { padding:15px 0; border-bottom:1px solid rgba(255,255,255,.13); }
+    .contact-item strong { color:var(--gold); display:block; }
+    form { display:grid; gap:14px; }
+    input,textarea { width:100%; padding:13px 14px; border:1px solid var(--line); border-radius:8px; font:inherit; }
+    textarea { min-height:145px; resize:vertical; }
+    footer { background:#0b111c; color:#aeb7c6; padding:30px 0; text-align:center; }
+    .small { font-size:.9rem; color:var(--muted); }
+    @media(max-width:820px){
+      nav { display:none; position:absolute; left:0; right:0; top:72px; padding:18px 5%; background:var(--navy); flex-direction:column; align-items:flex-start; }
+      nav.open { display:flex; }
+      .menu { display:block; }
+      .grid,.about,.contact-wrap { grid-template-columns:1fr; }
+      .numbers { grid-template-columns:repeat(2,1fr); }
+      .hero { min-height:590px; background-position:62% center; }
+    }
+    @media(max-width:520px){ .numbers,.facts { grid-template-columns:1fr; } section{padding:62px 0;} }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">Wasswa Paul <span>Kimbugwe</span></a>
+    <button class="menu" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Open menu">☰</button>
+    <nav>
+      <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a>
+      <a href="#principles">Principles</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="eyebrow">Professional Accounting • Nyendo, Masaka</div>
+      <h1>Numbers with integrity. Decisions with confidence.</h1>
+      <p>Welcome to the professional profile of <strong>Wasswa Paul Kimbugwe</strong>, Senior Accountant. Providing practical accounting, bookkeeping, financial reporting and business-support services with accuracy, confidentiality and professionalism.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#contact">Request a Consultation</a>
+        <a class="btn outline" href="tel:+256740065135">Call +256 740 065 135</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about">
+    <div>
+      <img class="about-photo" src="paul.jpg" alt="Wasswa Paul Kimbugwe in a formal suit">
+    </div>
+    <div>
+      <div class="section-title">
+        <div class="eyebrow">About the Owner</div>
+        <h2>Meet Senior Accountant Wasswa Paul Kimbugwe</h2>
+        <p>Wasswa Paul Kimbugwe is the owner of this professional accounting platform. He is based in Nyendo, Masaka, Uganda, and is committed to helping individuals, entrepreneurs and organizations understand their numbers and make responsible financial decisions.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><strong>Full Name</strong>Wasswa Paul Kimbugwe</div>
+        <div class="fact"><strong>Professional Role</strong>Senior Accountant</div>
+        <div class="fact"><strong>Date of Birth</strong>11 March 2004</div>
+        <div class="fact"><strong>Location</strong>Nyendo, Masaka, Uganda</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="services">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">Accounting Services</div>
+      <h2>Financial support built around accuracy and accountability.</h2>
+      <p>Services can be tailored for individuals, small businesses, growing enterprises and professional organizations.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="icon">01</div><h3>Bookkeeping</h3><p>Organizing income, expenses, receipts, payments and other financial transactions into clear records.</p></article>
+      <article class="card"><div class="icon">02</div><h3>Financial Reporting</h3><p>Preparing useful summaries such as income statements, cash-flow reports, statements of financial position and management reports.</p></article>
+      <article class="card"><div class="icon">03</div><h3>Budgeting & Planning</h3><p>Helping businesses plan spending, monitor performance and make informed financial decisions.</p></article>
+      <article class="card"><div class="icon">04</div><h3>Cash-Flow Management</h3><p>Tracking money coming in and going out so that businesses can protect liquidity and plan ahead.</p></article>
+      <article class="card"><div class="icon">05</div><h3>Payroll Support</h3><p>Supporting organized payroll records, staff payment schedules and related financial documentation.</p></article>
+      <article class="card"><div class="icon">06</div><h3>Business Advisory</h3><p>Practical financial guidance for entrepreneurs who want stronger controls, better records and sustainable growth.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="principles">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">Professional Approach</div>
+      <h2>What guides the work</h2>
+    </div>
+    <div class="grid">
+      <article class="card"><h3>Accuracy</h3><p>Financial information should be organized carefully and checked before it is used for decisions.</p></article>
+      <article class="card"><h3>Confidentiality</h3><p>Client financial information should be handled responsibly and shared only with authorized parties.</p></article>
+      <article class="card"><h3>Integrity</h3><p>Professional accounting starts with honesty, transparency and responsible financial practices.</p></article>
+    </div>
+    <div class="numbers">
+      <div class="number"><b>6+</b><span>Core service areas</span></div>
+      <div class="number"><b>24/7</b><span>Online information access</span></div>
+      <div class="number"><b>100%</b><span>Professional commitment</span></div>
+      <div class="number"><b>UG</b><span>Serving from Uganda</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="contact">
+  <div class="container contact-wrap">
+    <div class="contact-card">
+      <div class="eyebrow">Get in Touch</div>
+      <h2>Let's talk about your accounts.</h2>
+      <p>For accounting support, business financial organization or a consultation, contact Senior Accountant Wasswa Paul Kimbugwe.</p>
+      <div class="contact-item"><strong>Phone</strong><a href="tel:+256740065135">+256 740 065 135</a></div>
+      <div class="contact-item"><strong>Email</strong><a href="mailto:wasswapaulian@gmail.com">wasswapaulian@gmail.com</a></div>
+      <div class="contact-item"><strong>Location</strong>Nyendo, Masaka, Uganda</div>
+    </div>
+    <div class="card">
+      <h3>Send an enquiry</h3>
+      <p class="small">This form opens your email app; it does not store submissions on this website.</p>
+      <form onsubmit="sendMail(event)">
+        <input id="name" placeholder="Your name" required>
+        <input id="email" type="email" placeholder="Your email" required>
+        <textarea id="message" placeholder="How can we help?" required></textarea>
+        <button class="btn primary" type="submit">Send Enquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> Wasswa Paul Kimbugwe • Senior Accountant</p>
+    <p class="small">Nyendo, Masaka, Uganda • Professional accounting and financial support</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  function sendMail(e) {
+    e.preventDefault();
+    const name = encodeURIComponent(document.getElementById('name').value);
+    const email = encodeURIComponent(document.getElementById('email').value);
+    const message = encodeURIComponent(document.getElementById('message').value);
+    location.href = `mailto:wasswapaulian@gmail.com?subject=Accounting%20Enquiry%20from%20${name}&body=Name:%20${name}%0AEmail:%20${email}%0A%0AMessage:%0A${message}`;
+  }
+</script>
+</body>
+</html>
